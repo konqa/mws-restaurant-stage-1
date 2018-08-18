@@ -3,41 +3,86 @@ main {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 549px) {
-  .nav {
-    z-index: 10;
-    background-color: #fff;
-    width: 300px;
-    position: absolute;
-    /* This trasform moves the drawer off canvas. */
-    -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
-    transition: transform 0.3s ease;
-  }
-  .nav.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+@media screen and (max-width: 550px) {
+  #map-container {
+    /* height: 60vh; */
+    order: -1;
   }
 
+  #restaurant-container {
+    width: 100%;
+    order: 0;
+  }
 
+  #reviews-container {
+    width: 100%;
+    order: 1;
+  }
 
+  #breadcrumb {
+    font-size: 24px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .inside #map-container {
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+    top: 142px;
+    height: 45vh;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .rating {
+    width: 25%;
+  }
+
+  #restaurant-img,
+  #restaurant-cuisine,
+  #reviews-list li {
+    width: 100%;
+  }
+
+  .review-date {
+    font-size: 13px;
+    width: 40%;
+  }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 551px) {
+  .inside #map-container {
+    width: 40%;
+  }
 
+  #reviews-list li {
+    width: 100%;
+  }
 
-
+  .rating {
+    width: 35%;
 }
 
-@media screen and (min-width: 700px) {
+.review-date {
+  font-size: 11px;
+  width: 60%;
+}
+}
 
+@media screen and (min-width: 650px) {
+  .review-date {
+    font-size: 12px;
+    width: 50%;
+  }
 
-
-
+  #restaurant-name {
+    width: 95%;
+}
 }
 
 @media screen and (min-width: 850px) {
-
-  
+  .rating {
+    width: 20%;
+  }
 }
