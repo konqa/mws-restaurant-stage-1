@@ -59,15 +59,15 @@ fetchCuisines = () => {
  * Set cuisines HTML.
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
-  const select = document.getElementById('cuisines-select');
+  const select = document.getElementById("cuisines-select");
 
   cuisines.forEach(cuisine => {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.innerHTML = cuisine;
     option.value = cuisine;
     select.append(option);
   });
-}
+};
 
 /**
  * Initialize leaflet map, called from HTML.
@@ -128,11 +128,11 @@ updateRestaurants = () => {
 /**
  * Clear current restaurants, their HTML and remove their map markers.
  */
-resetRestaurants = (restaurants) => {
+resetRestaurants = restaurants => {
   // Remove all restaurants
   self.restaurants = [];
-  const ul = document.getElementById('restaurants-list');
-  ul.innerHTML = '';
+  const ul = document.getElementById("restaurants-list");
+  ul.innerHTML = "";
 
   // Remove all map markers
   if (self.markers) {
@@ -140,18 +140,18 @@ resetRestaurants = (restaurants) => {
   }
   self.markers = [];
   self.restaurants = restaurants;
-}
+};
 
 /**
  * Create all restaurants HTML and add them to the webpage.
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
-  const ul = document.getElementById('restaurants-list');
+  const ul = document.getElementById("restaurants-list");
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });
   addMarkersToMap();
-}
+};
 
 /**
  * Create restaurant HTML.
@@ -162,7 +162,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = restaurant.name;
+  image.alt = `${restaurant.name} in ${restaurant.neighborhood}`;
   li.append(image);
 
   const name = document.createElement('h1');
