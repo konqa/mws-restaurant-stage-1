@@ -113,12 +113,11 @@
   }
 
   .rating {
-    width: 35%;
+    width: 20%;
   }
 
   #reviews-list li {
-    width: 43%;
-    display: inline-block;
+    width: 100%;
     vertical-align: top;
     margin: 15px;
   }
@@ -137,19 +136,8 @@
     font-size: 14pt;
 }
 
-.review-date {
-  font-size: 12px;
-  width: 100%;
-  text-align: left;
-  padding: 8px;
-}
-
-.review-blocks-padding-name {
-  height: 50px;
-}
-
 #restaurant-hours {
-  margin-top: 105px;
+  margin-top: 125px;
   width: 22%;
 }
 
