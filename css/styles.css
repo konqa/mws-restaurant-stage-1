@@ -57,6 +57,12 @@ nav,
 section {
   display: block;
 }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -187,7 +193,7 @@ nav h1 a {
   color: #f18200;
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   font-size: 14pt;
-  font-weight: 200;
+  font-weight: 600;
   letter-spacing: 0;
   line-height: 1.3;
   margin: 20px 0 10px;
@@ -301,12 +307,12 @@ nav h1 a {
   -moz-border-radius-bottomright: 40px;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, .5, .01);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0.5, 0.01);
 }
 
 #restaurant-hours td {
   color: #666;
-  font-size: 13pt;
+  font-size: 12pt;
   padding: 8px 29px 8px 0px;
 }
 
@@ -355,9 +361,16 @@ nav h1 a {
   padding: 16px 35px;
 }
 
-.restaurant-image {
+#restaurant-img {
   -webkit-border-top-left-radius: 40px;
   -webkit-border-bottom-right-radius: 40px;
   -moz-border-radius-topleft: 40px;
   -moz-border-radius-bottomright: 40px;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+tr:nth-child(odd) {
+  background: #eceff1;
 }
