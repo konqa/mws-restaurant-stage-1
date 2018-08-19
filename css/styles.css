@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+html, body {
+  height: 100%;
+}
 body,
 td,
 th,
@@ -58,24 +61,10 @@ section {
   display: block;
 }
 
-/* main {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-}
-
-#maincontent {
-  background-color: #f3f3f3;
-  min-height: 100%;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 #footer {
@@ -87,17 +76,22 @@ section {
   text-align: center;
   text-transform: uppercase;
 }
+
 /* ====================== Navigation ====================== */
+
 nav {
-  /* width: 100%; */
-  /* height: 80px; */
+  display: flex;
+  width: 100%;
+  height: 80px;
   background-color: #252831;
-  text-align: center;
-  padding: 20px;
+  /* text-align: center; */
+  /* padding: 20px, 0; */
 }
+
 nav h1 {
   margin: auto;
 }
+
 nav h1 a {
   color: #fff;
   font-size: 14pt;
@@ -174,13 +168,19 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
+
 #restaurants-list {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
-  padding: 30px 15px 60px;
+  padding: 30px 0 60px;
   text-align: center;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -192,6 +192,7 @@ nav h1 a {
   width: 270px;
   display: inline-block;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
@@ -200,6 +201,7 @@ nav h1 a {
   /* min-height: 248px; */
   min-width: 100%;
 }
+
 #restaurants-list li h1 {
   color: #f18200;
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
@@ -210,6 +212,7 @@ nav h1 a {
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
@@ -325,10 +328,6 @@ nav h1 a {
   color: #666;
   font-size: 12pt;
   padding: 8px 29px 8px 0px;
-}
-
-#reviews-list li p {
-  /* margin: 0 0 10px; */
 }
 
 .reviewer-name {
