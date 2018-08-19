@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -23,16 +23,16 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container" aria-owns="map" tabindex="-1">
+    <section id="map-container" aria-owns="map" tabindex="-1" aria-label="map-application">
       <div id="map" role="application" aria-label="Map of restaurants"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" aria-label="by neighborhoods"  tabindex="0" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" aria-label="by cuisines"  tabindex="0" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
@@ -40,7 +40,7 @@
     </section>
   </main>
 
-  <footer id="footer">
+  <footer id="footer" tabindex="0">
       Copyright (c) 2017 <a href="./"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
